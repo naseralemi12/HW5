@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Components</title>
+    <style>
+        /*
+          In theory passing in variables via CSS to the component is an idea beside using standard attributes (standard or data-*) you might define on a tag since WCs are just HTML elements
+         */
+        
+         :root {
+            --button-count-color: red;
+        }
+        /*
+          simple example of using CSS to deal with custom elements before definition
+
+           You also can reserve space, add a loader, or other concerns if you like
+         */
+        
+        button-count:not(:defined) {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- what happens with no JS? -->
+    <button-count><b></b></button-count>
+    <button onclick="history.back()">Go Back</button>
+    <script src="buttonCount.js">
+    </script>
+</body>
+
+</html>
